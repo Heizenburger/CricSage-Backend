@@ -5,7 +5,7 @@ from dateutil.parser import parse
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://cricsage-frontend.vercel.app"}})
 
 API_KEY = 'b690e822-d7f3-44e8-9935-87db2ce55d96'
 BASE_URL = "https://api.cricapi.com/v1"
